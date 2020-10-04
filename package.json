@@ -1,0 +1,31 @@
+{
+  "name": "design",
+  "version": "1.1.0",
+  "description": "Base config",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwind build src/main.css -o public/css/main.css"
+  },
+  "keywords": [],
+  "author": "rangodz",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.2.0",
+    "alpinejs": "^2.7.0",
+    "animejs": "^3.2.0",
+    "bootstrap-icons": "^1.0.0",
+    "swiper": "^6.3.2",
+    "tailwind-caret-color": "^1.1.0",
+    "tailwindcss": "^1.8.10",
+    "tailwindcss-aspect-ratio": "^3.0.0",
+    "tailwindcss-elevation": "^0.3.5",
+    "tailwindcss-gradients": "^3.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "@tailwindcss/ui": "^0.3.1",
+    "tailwindcss-responsive-embed": "^1.0.0",
+    "tailwindcss-scrims": "^1.0.0",
+    "tailwindcss-writing-mode": "^1.0.0"
+  }
+}

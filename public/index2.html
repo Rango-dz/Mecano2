@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/plus.css">
+    <link rel="stylesheet" href="/public/css/swiper-bundle.css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400italic' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <title>Mecano M</title>
+</head>
+<body>
+<div class="container w-screen max-w-full relative z-10">
+
+  <div x-data="{open: false}" class="bg-gray-800 h-auto inset-2 border-t-0 flex justify-between flex-col">
+
+    <div x-show.transition.duration.300ms="open"
+    x-on:click.away="open = false" class="bg-gray-700 elevate-0 relative w-full p-4 flex flex-col leading-4 pl-8 font-mono space-y-4 text-white">
+  <p class="flex">
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+      </svg>
+
+     <span class="pl-2"> Du lundi au samedi: de 7 h 00 à 18 h 00</span></p>
+  <p class="flex">
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+      </svg>
+
+      <span class="pl-2">Planifiez votre rendez-vous 07707777</span></p>
+  <p class="flex">
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-map-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.502.502 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5V.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.498.498 0 0 0-.196 0L5 14.09zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1-.5-.1z"/>
+      </svg>
+
+      <span class="pl-2">City Hachemi 2059</span></p>
+    </div>
+
+    <div x-on:click="open = true" class=" top-10 flex 
+    justify-between">
+    <div class="animate-bounce pl-2 pt-4 text-Myello">
+    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-caret-down-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+    </svg> 
+    </div>
+    <div class="rendv flex flex-no-wrap font-semibold h-12 items-center relative self-end px-4">
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5A.5.5 0 0 0 4 8z"/>
+      </svg>
+      <span class="pl-2">Rendez-vous</span>
+
+    </div>
+    </div>
+    </div>
+    
+  </div>
+  <header class="bg-grey1 px-4 bg-white border-gray-300 border elevation-1 pb-3 relative z-10">
+  <!-- Top contact info -->
+  <!-- header for logo and get in touch button -->
+  <div class="flex items-center justify-between">
+    <div class="puopu">
+      <p class="puopu-r1">Mecano <span class="puopu-small transform rotate-45">M</span></p>
+    </div>
+    <div>
+      <button id="hamb" type="button" class="md:hidden focus:outline-none">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="hidden md:flex md:flex-row" id="mobile">
+    <a class="block text-darkbis font-semibold" href="#">Home</a>
+    <a class="block text-darkbis font-semibold" href="#">About</a>
+    <a class="block text-darkbis font-semibold" href="#">Contact us</a>
+  </div>
+</header>
+  <!-- end header -->
+
+<!-- carsoul -->
+<div x-data="{swiper: null}"
+  x-init="swiper = new Swiper($refs.container, {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      }, 
+    })"
+  class="h-10/12 w-screen max-w-full flex flex-row relative -mt-40"
+>
+  <div class="absolute inset-y-0 left-10 z-10 flex items-center">
+    <button @click="swiper.slidePrev()" 
+            class="bg-white flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none opacity-25">
+      <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+    </button>
+  </div>
+
+  <div class="swiper-container" x-ref="container">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <div class="flex rounded shadow overflow-hidden">
+          <div class="flex-shrink-0">
+            <img class="h-screen w-screen object-cover opacity-50" src="/public/image/slide-new2.jpg" alt="">
+            
+            <div class="prose-xl absolute bottom-1/4 ml-1/12 md:ml-1/4">
+              <h3 class="ml-1/3 md:ml-0 font-bold md:font-extrabold md:text-5xl text-white text-3xl">Multipoint</h4>
+              <h1 class="font-extrabold md:text-9xl text-Myello ">Inspection de véhicule</h3>
+              <p class="font-semibold md:text-4xl">Vérification du démarrage, de l'arrêt et de la direction sans frais</p>
+            </div>
+              
+          </div>
+        </div>
+      </div>
+              
+      <div class="swiper-slide">
+        <div class="rounded shadow">
+          <div class="">
+            <img class="h-screen w-screen object-cover opacity-50" src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+            <div class="prose-xl absolute bottom-1/4 ml-1/12 md:ml-1/4">
+              <h1 class="font-extrabold md:text-9xl text-Myello ">Service fiable</h1>
+              <p class="font-semibold md:text-4xl">Plus de 20 ans de service automobile de qualité</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <div class="rounded shadow">
+          <div class="">
+            <img class="h-screen w-screen object-cover opacity-50" src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
+            <div class="prose-xl absolute bottom-1/4 ml-1/12 md:ml-1/4">
+              <h3 class="ml-1/3 md:ml-0 font-bold md:font-extrabold md:text-5xl text-white text-3xl">Multipoint</h4>
+              <h1 class="font-extrabold md:text-9xl text-Myello ">Inspection de véhicule</h3>
+              <p class="font-semibold md:text-4xl">Vérification du démarrage, de l'arrêt et de la direction sans frais</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute inset-y-0 right-10 z-10 flex items-center">
+    <button @click="swiper.slideNext()" 
+            class="bg-white opacity-25 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+      <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+    </button>
+  </div>
+</div>
+<!-- ends here -->
+  <!-- getintouch fields form and explination -->
+
+  <div class="w-full mt-6 overflow-hidden mx-auto md:w-min-content elevation-2" x-data="{ openTab: 1 }">
+    <table class="table-auto">
+        <tbody class="overflow-x-scroll border-b justify-center">
+          <tr>
+            <td class="-mb-px mr-1 bg-gradient-to-tr bg-invertwhite elevation-1" @click="openTab = 1">
+                <a :class="openTab === 1 ? 'rounded-t text-blue-600 font-semibold border-b-2 border-Myello' : 'text-blue-500 hover:text-blue-800'" class="bg-invertwhite inline-block py-4 px-6 md:py-14 md:px-20 font-semibold text-blue-500 hover:text-blue-800 cursor-default">
+                  <span class="icon1 active">
+                    <i class="text-3xl icon-diag"></i>
+                    <i class="sr-only md:not-sr-only">Diagnostique</i>
+                  </span>
+                </a>
+            </td>
+            <td class="mr-1 bg-gradient-to-tr bg-invertwhite elevation-1" @click="openTab = 2">
+                <a :class="openTab === 2 ? 'rounded-t text-blue-600 font-semibold border-b-2 border-Myello' : 'text-blue-500 hover:text-blue-800'" class="bg-white inline-block py-4 px-6 md:py-14 md:px-20 font-semibold text-blue-500 hover:text-blue-800 cursor-default" > 
+                  
+                  <span class="services-tabs-icon icon2">
+                    <i class="text-3xl icon-engine"></i>
+                  <i class="sr-only md:not-sr-only">Réparation de moteur</i></span> </a>
+            </td>
+            <td class="mr-1 bg-gradient-to-tr bg-invertwhite elevation-1" @click="openTab = 3">
+                <a :class="openTab === 3 ? 'rounded-t text-blue-600 font-semibold border-b-2 border-Myello' : 'text-blue-500 hover:text-blue-800'" class="bg-white inline-block py-4 px-6 md:py-14 md:px-20 font-semibold text-blue-500 hover:text-blue-800 cursor-default" > 
+
+                  <span class="services-tabs-icon icon3">
+                    <i class="text-3xl icon-oil"></i>
+                  <i class="sr-only md:not-sr-only">Huile / Lubrifiant / Filtres</i>
+                </span>
+              </a>
+            </td>
+            <td class="mr-1 bg-gradient-to-tr bg-invertwhite elevation-1" @click="openTab = 4">
+                <a :class="openTab === 4 ? 'rounded-t text-blue-600 font-semibold border-b-2 border-Myello' : 'text-blue-500 hover:text-blue-800'" class="bg-white inline-block py-4 px-6 md:py-14 md:px-20 font-semibold text-blue-500 hover:text-blue-800 cursor-default" >
+                  
+                  <span class="services-tabs-icon icon4">
+                  <i class="text-3xl icon-gearshift"></i>
+                    <i class="sr-only md:not-sr-only">Pneus</i>
+                </span> </a>
+            </td>
+            <td class="mr-1 bg-gradient-to-tr bg-invertwhite elevation-1" @click="openTab = 5">
+              <a :class="openTab === 5 ? 'rounded-t text-blue-600 font-semibold border-b-2 border-Myello' : 'text-blue-500 hover:text-blue-800'" class="bg-white inline-block py-4 px-6 md:py-14 md:px-20 font-semibold text-blue-500 hover:text-blue-800 cursor-default" >
+                
+                <span class="services-tabs-icon icon5">
+                  <i class="text-3xl icon-car-wheel"></i>
+                <i class="sr-only md:not-sr-only">Transmission</i>
+                </span>
+              </a>
+          </td>
+          <td class=" bg-gradient-to-tr bg-invertwhite elevation-1" @click="openTab = 6">
+            <a :class="openTab === 6 ? 'rounded-t text-blue-600 font-semibold border-b-2 border-Myello' : 'text-blue-500 hover:text-blue-800'" class="bg-white inline-block py-4 px-6 md:py-14 md:px-20 font-semibold text-blue-500 hover:text-blue-800 cursor-default" >
+              
+              <span class="services-tabs-icon icon6">
+                <i class="text-3xl icon-power"></i>
+                <i class="sr-only md:not-sr-only">Batteries</i>
+              </span>
+            </a>
+        </td>
+      </tr>
+        </tbody>
+    </table>
+    <div class=" bg-greylight p-16 relative my-auto">
+      <img width="814" height="330" src="https://smartdata.tonytemplates.com/car-repair-service-v4/demo2/wp-content/uploads/sites/11/2020/04/service-tab.png" class="attachment-full size-full" alt="" loading="lazy" srcset="https://smartdata.tonytemplates.com/car-repair-service-v4/demo2/wp-content/uploads/sites/11/2020/04/service-tab.png 814w, https://smartdata.tonytemplates.com/car-repair-service-v4/demo2/wp-content/uploads/sites/11/2020/04/service-tab-300x122.png 300w, https://smartdata.tonytemplates.com/car-repair-service-v4/demo2/wp-content/uploads/sites/11/2020/04/service-tab-768x311.png 768w, https://smartdata.tonytemplates.com/car-repair-service-v4/demo2/wp-content/uploads/sites/11/2020/04/service-tab-600x243.png 600w" sizes="(max-width: 814px) 100vw, 814px">
+
+
+        <div id="" class="" x-show="openTab === 1">
+          
+          <p class="prose mt-8 text-invertwhite border p-4 elevation-1">
+            Les outils de diagnostic automobile ont non seulement été d'une valeur inestimable pour les garages, mais ils ont également permis une nouvelle vague de réparations et d'améliorations automobiles à la maison. Avec les bons outils, il peut être facile de découvrir ce qui ne va pas avec un véhicule défectueux, mais comme aide supplémentaire, voici 6 conseils à retenir lorsque vous effectuez des diagnostics de voiture pour les passionnés.
+          </p> 
+          <span class="flex items-center justify-center icon1" ><i class="bg-white rounded-full w-10 h-10 content-center text-2xl absolute top-28 right-64 icon-diag"></i></span>
+        </div>
+        <div id="" class="" x-show="openTab === 2" style="display: none;">
+            <p>Un moteur est comme le cœur d'une voiture. Il doit fonctionner correctement pour que votre voiture reste en mouvement. Je ne peux pas insister davantage sur l’importance de maintenir le moteur en forme et de fonctionner efficacement. Voici 10 conseils d'entretien du moteur qui aideront votre moteur à fonctionner pour toujours:</p>
+            <span class="services-tabs-icon icon2 active" style="left:8%;top:42%"><i class=" icon-engine"></i></span>
+        </div>
+        <div id="" class="" x-show="openTab === 3" style="display: none;">
+            <p>Vérifiez l'huile moteur à chaque autre remplissage
+              Pour une lecture précise du niveau d'huile du moteur:
+              
+              Courez ou conduisez votre voiture pendant environ 15 minutes pour réchauffer l'huile; puis garez la voiture dans un endroit plat.
+              Arrêtez le moteur et attendez 15 minutes pour permettre à l'huile du moteur de s'écouler vers le carter d'huile.
+              Retirez la jauge et essuyez-la avec une serviette en papier ou un chiffon.
+              Réinsérez la jauge en veillant à la pousser à fond, puis retirez-la à nouveau pour vérifier le niveau d'huile. Il devrait être quelque part entre les marques de hachage sur la jauge.
+              Ajoutez le type et la quantité d'huile spécifiés dans votre manuel du propriétaire, si nécessaire.</p>
+            <span class="services-tabs-icon icon3" style="left:13%;top:28%"><i class=" icon-oil"></i></span>
+        </div>
+        <div id="" class="" x-show="openTab === 4" style="display: none;">
+            <p>
+              Évitez les réparations coûteuses de la transmission. Lisez les 10 conseils de Mister Transmission pour garder une voiture à transmission automatique en bon état
+
+            Selon le type de véhicule que vous conduisez et son âge, les réparations de transmission peuvent être coûteuses. Parfois, il est impossible d’éviter de faire réparer votre véhicule par un spécialiste de la réparation de la transmission, en particulier si vous êtes soumis à une panne totale.
+            
+            Mais il y a des choses que vous pouvez faire pour prolonger la durée de vie de votre transmission automatique et éviter une panne de transmission.
+            </p>
+            <span class="services-tabs-icon icon4" style="left:82%;top:59%"><i class=" icon-car-wheel"></i></span>
+        </div>
+        <div id="" class="" x-show="openTab === 5" style="display: none;">
+          <p>
+            De bons pneus contribuent à la sécurité, augmentent la consommation de carburant, améliorent la maniabilité et les arrêts
+            Effectuer une inspection visuelle rapide peut vous dire s'il est temps pour un nouvel ensemble de pneus
+            En remplaçant les quatre à la fois, vous pourrez mieux entretenir vos pneus
+            Prévoyez environ 500 miles de temps de rodage avant de pousser vos pneus fort</p>
+
+          <span class="services-tabs-icon icon5" style="left:38%;top:67%"><i class=" icon-gearshift"></i></span>
+      </div>
+      <div id="" class="" x-show="openTab === 6" style="display: none;">
+        <p>Les batteries de voiture sont un élément essentiel d'une automobile. De la mise en route de votre voiture à la charge de votre téléphone en déplacement, les batteries fournissent le zap dont votre véhicule a besoin pour continuer à rouler. C'est pourquoi il est si important de savoir quand commencer à envisager un changement de batterie de voiture, ainsi que ce que vous pouvez faire pour prolonger sa durée de vie.</p>
+        <span class="services-tabs-icon icon6" style="left:25%;top:28%"><i class=" icon-power"></i></span>
+    </div>
+    </div>
+</div>
+  <!-- end here -->
+
+  <!-- Who we are? -->
+
+  <!-- <div class="pr-14 lg:pr-20 min-h-full col-span-2 grid grid-cols-2 grid-row-2 gap-4"> -->
+  
+<!-- </div> -->
+  <!-- ends here -->
+
+  <!-- Stats banner and h1 -->
+  <div class="bg-worldpng bg-contain lg:bg-cover col-span-2 prose-lg max-w-none rectangle3 h-48 bg-white relative top-40 grid grid-flow-rows-dense grid-cols-4 gap-4 justify-items-center mb-8 px-4 mx-8 lg:mx-40">
+    <div class="flex flex-col justify-evenly">
+        <span class="text-5xl font-bold self-center">20+</span>
+        <span class="leading-5 text-xl self-center text-center">Year of Experience</span>
+    </div>
+    <div class="flex flex-col justify-evenly">
+      <span class="text-5xl font-bold self-center">84%</span>
+      <span class="leading-5 text-xl self-center text-center">Increase in App Downloads</span>
+    </div>
+    <div class="flex flex-col justify-evenly">
+        <span class="text-5xl font-bold self-center">130%</span>
+        <span class="leading-5 text-xl self-center text-center">Increase in Revenue
+        in FY18-19 itself</span>
+    </div>
+    <div class="flex flex-col justify-evenly">
+        <span class="text-5xl font-bold self-center">45Mn+</span>
+        <span class="leading-5 text-xl text-center">Global Customer
+        Base in One Year</span>
+    </div>
+
+  </div>
+  <div class="col-span-2 grid grid-flow-rows-dense grid-cols-2 gap-0 h-80 mt-12 mb-8">
+
+  <div class="col-span-1 mask bg-layer1png"></div>
+  <div class="col-span-1 bg-maskpng bg-no-repeat flex">
+      <p class="prose-2xl text-3xl font-bold text-center
+    place-self-center">Adsandurl helped us growour sales and downloads over 135% in just six months.
+      </p>
+  </div>
+
+    </div>
+  <!-- ends here -->
+
+  <!-- Workflow -->
+
+
+  <!-- ends here -->
+
+  <!-- Clients we've worked with slide tabs -->
+  <!-- ends here -->
+
+  <!-- Key technology we use  tabs-->
+  <!-- ends here -->
+
+
+  <!-- what people say slide -->
+  <!-- ends here -->
+
+  <!-- footer -->
+  <div class="bg-gray-100">
+    <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-center">
+       <div class="p-5 w-48 ">
+          <div class="text-xs uppercase text-gray-500 font-medium">Home</div>
+          <a class="my-3 block" href="/#">Services <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Products <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">About Us <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Pricing <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Partners <span class="text-teal-600 text-xs p-1">New</span></a> 
+       </div>
+       <div class="p-5 w-48 ">
+          <div class="text-xs uppercase text-gray-500 font-medium">User</div>
+          <a class="my-3 block" href="/#">Sign in <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">New Account <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Demo <span class="text-teal-600 text-xs p-1">New</span></a><a class="my-3 block" href="/#">Career <span class="text-teal-600 text-xs p-1">We're hiring</span></a><a class="my-3 block" href="/#">Surveys <span class="text-teal-600 text-xs p-1">New</span></a> 
+       </div>
+       <div class="p-5 w-48 ">
+          <div class="text-xs uppercase text-gray-500 font-medium">Resources</div>
+          <a class="my-3 block" href="/#">Documentation <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a> 
+       </div>
+       <div class="p-5 w-48 ">
+          <div class="text-xs uppercase text-gray-500 font-medium">Product</div>
+          <a class="my-3 block" href="/#">Our Products <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Great Deals <span class="text-teal-600 text-xs p-1">New</span></a><a class="my-3 block" href="/#">Analytics <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Mobile <span class="text-teal-600 text-xs p-1"></span></a> 
+       </div>
+       <div class="p-5 w-48 ">
+          <div class="text-xs uppercase text-gray-500 font-medium">Support</div>
+          <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a> 
+       </div>
+       <div class="p-5 w-48 ">
+          <div class="text-xs uppercase text-gray-500 font-medium">Contact us</div>
+          <a class="my-3 block" href="/#">XXX XXXX, Floor 4 San Francisco, CA <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">contact@company.com <span class="text-teal-600 text-xs p-1"></span></a> 
+       </div>
+    </div>
+ </div>
+ 
+ <div class="bg-gray-100 pt-2 ">
+    <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
+       md:flex-row max-w-6xl">
+       <div class="mt-2">© Copyright 2020. All Rights Reserved.</div>
+       <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+          <a href="/#" class="w-6 mx-1">
+             <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                <path id="Twitter" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
+                   5.373,-12 12,-12c6.627,0 12,5.373 12,12Zm-6.465,-3.192c-0.379,0.168
+                   -0.786,0.281 -1.213,0.333c0.436,-0.262 0.771,-0.676
+                   0.929,-1.169c-0.408,0.242 -0.86,0.418 -1.341,0.513c-0.385,-0.411
+                   -0.934,-0.667 -1.541,-0.667c-1.167,0 -2.112,0.945 -2.112,2.111c0,0.166
+                   0.018,0.327 0.054,0.482c-1.754,-0.088 -3.31,-0.929
+                   -4.352,-2.206c-0.181,0.311 -0.286,0.674 -0.286,1.061c0,0.733 0.373,1.379
+                   0.94,1.757c-0.346,-0.01 -0.672,-0.106 -0.956,-0.264c-0.001,0.009
+                   -0.001,0.018 -0.001,0.027c0,1.023 0.728,1.877 1.694,2.07c-0.177,0.049
+                   -0.364,0.075 -0.556,0.075c-0.137,0 -0.269,-0.014 -0.397,-0.038c0.268,0.838
+                   1.048,1.449 1.972,1.466c-0.723,0.566 -1.633,0.904 -2.622,0.904c-0.171,0
+                   -0.339,-0.01 -0.504,-0.03c0.934,0.599 2.044,0.949 3.237,0.949c3.883,0
+                   6.007,-3.217 6.007,-6.008c0,-0.091 -0.002,-0.183 -0.006,-0.273c0.413,-0.298
+                   0.771,-0.67 1.054,-1.093Z"></path>
+             </svg>
+          </a>
+          <a href="/#" class="w-6 mx-1">
+             <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                <path id="Facebook" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
+                   5.373,-12 12,-12c6.627,0 12,5.373
+                   12,12Zm-11.278,0l1.294,0l0.172,-1.617l-1.466,0l0.002,-0.808c0,-0.422
+                   0.04,-0.648 0.646,-0.648l0.809,0l0,-1.616l-1.295,0c-1.555,0 -2.103,0.784
+                   -2.103,2.102l0,0.97l-0.969,0l0,1.617l0.969,0l0,4.689l1.941,0l0,-4.689Z"></path>
+             </svg>
+          </a>
+          <a href="/#" class="w-6 mx-1">
+             <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                <g id="Layer_1">
+                   <circle id="Oval" cx="12" cy="12" r="12"></circle>
+                   <path id="Shape" d="M19.05,8.362c0,-0.062 0,-0.125 -0.063,-0.187l0,-0.063c-0.187,-0.562
+                      -0.687,-0.937 -1.312,-0.937l0.125,0c0,0 -2.438,-0.375 -5.75,-0.375c-3.25,0
+                      -5.75,0.375 -5.75,0.375l0.125,0c-0.625,0 -1.125,0.375
+                      -1.313,0.937l0,0.063c0,0.062 0,0.125 -0.062,0.187c-0.063,0.625 -0.25,1.938
+                      -0.25,3.438c0,1.5 0.187,2.812 0.25,3.437c0,0.063 0,0.125
+                      0.062,0.188l0,0.062c0.188,0.563 0.688,0.938 1.313,0.938l-0.125,0c0,0
+                      2.437,0.375 5.75,0.375c3.25,0 5.75,-0.375 5.75,-0.375l-0.125,0c0.625,0
+                      1.125,-0.375 1.312,-0.938l0,-0.062c0,-0.063 0,-0.125
+                      0.063,-0.188c0.062,-0.625 0.25,-1.937 0.25,-3.437c0,-1.5 -0.125,-2.813
+                      -0.25,-3.438Zm-4.634,3.927l-3.201,2.315c-0.068,0.068 -0.137,0.068
+                      -0.205,0.068c-0.068,0 -0.136,0 -0.204,-0.068c-0.136,-0.068 -0.204,-0.204
+                      -0.204,-0.34l0,-4.631c0,-0.136 0.068,-0.273 0.204,-0.341c0.136,-0.068
+                      0.272,-0.068 0.409,0l3.201,2.316c0.068,0.068 0.136,0.204
+                      0.136,0.34c0.068,0.136 0,0.273 -0.136,0.341Z" style="fill: rgb(255, 255, 255);"></path>
+                </g>
+             </svg>
+          </a>
+          <a href="/#" class="w-6 mx-1">
+             <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                <path id="Shape" d="M7.3,0.9c1.5,-0.6 3.1,-0.9 4.7,-0.9c1.6,0 3.2,0.3 4.7,0.9c1.5,0.6 2.8,1.5
+                   3.8,2.6c1,1.1 1.9,2.3 2.6,3.8c0.7,1.5 0.9,3 0.9,4.7c0,1.7 -0.3,3.2
+                   -0.9,4.7c-0.6,1.5 -1.5,2.8 -2.6,3.8c-1.1,1 -2.3,1.9 -3.8,2.6c-1.5,0.7
+                   -3.1,0.9 -4.7,0.9c-1.6,0 -3.2,-0.3 -4.7,-0.9c-1.5,-0.6 -2.8,-1.5
+                   -3.8,-2.6c-1,-1.1 -1.9,-2.3 -2.6,-3.8c-0.7,-1.5 -0.9,-3.1 -0.9,-4.7c0,-1.6
+                   0.3,-3.2 0.9,-4.7c0.6,-1.5 1.5,-2.8 2.6,-3.8c1.1,-1 2.3,-1.9
+                   3.8,-2.6Zm-0.3,7.1c0.6,0 1.1,-0.2 1.5,-0.5c0.4,-0.3 0.5,-0.8 0.5,-1.3c0,-0.5
+                   -0.2,-0.9 -0.6,-1.2c-0.4,-0.3 -0.8,-0.5 -1.4,-0.5c-0.6,0 -1.1,0.2
+                   -1.4,0.5c-0.3,0.3 -0.6,0.7 -0.6,1.2c0,0.5 0.2,0.9 0.5,1.3c0.3,0.4 0.9,0.5
+                   1.5,0.5Zm1.5,10l0,-8.5l-3,0l0,8.5l3,0Zm11,0l0,-4.5c0,-1.4 -0.3,-2.5
+                   -0.9,-3.3c-0.6,-0.8 -1.5,-1.2 -2.6,-1.2c-0.6,0 -1.1,0.2 -1.5,0.5c-0.4,0.3
+                   -0.8,0.8 -0.9,1.3l-0.1,-1.3l-3,0l0.1,2l0,6.5l3,0l0,-4.5c0,-0.6 0.1,-1.1
+                   0.4,-1.5c0.3,-0.4 0.6,-0.5 1.1,-0.5c0.5,0 0.9,0.2 1.1,0.5c0.2,0.3 0.4,0.8
+                   0.4,1.5l0,4.5l2.9,0Z"></path>
+             </svg>
+          </a>
+          <a href="/#" class="w-6 mx-1">
+             <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                <path id="Combined-Shape" d="M12,24c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12c-6.627,0
+                   -12,5.373 -12,12c0,6.627 5.373,12 12,12Zm6.591,-15.556l-0.722,0c-0.189,0
+                   -0.681,0.208 -0.681,0.385l0,6.422c0,0.178 0.492,0.323
+                   0.681,0.323l0.722,0l0,1.426l-4.675,0l0,-1.426l0.935,0l0,-6.655l-0.163,0l-2.251,8.081l-1.742,0l-2.222,-8.081l-0.168,0l0,6.655l0.935,0l0,1.426l-3.74,0l0,-1.426l0.519,0c0.203,0
+                   0.416,-0.145 0.416,-0.323l0,-6.422c0,-0.177 -0.213,-0.385
+                   -0.416,-0.385l-0.519,0l0,-1.426l4.847,0l1.583,5.704l0.042,0l1.598,-5.704l5.021,0l0,1.426Z"></path>
+             </svg>
+          </a>
+       </div>
+    </div>
+ </div>
+  <!-- ends here -->
+</div>
+<script>
+  let hamb= document.getElementById('hamb');
+  let mob = document.getElementById('mobile');
+
+  hamb.addEventListener('click', function(){
+    mobile.classList.toggle('active');
+  })
+  </script>
+  <script src="/public/js/alpine.js"></script>
+  <script src="/public/js/alpine-ie11.js"></script>
+  <script src="/public/js/anime.min.js"></script>
+  <script src="/public/js/swiper-bundle.js"></script>
+</body>
+</html>
