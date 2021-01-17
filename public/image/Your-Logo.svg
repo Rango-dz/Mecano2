@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="215" height="42" viewBox="0 0 215 42">
-  <defs>
-    <style>
-      .cls-1 {
-        font-size: 14.957px;
-        opacity: 0.48;
-        font-family: "Myriad Pro";
-        font-weight: 700;
-      }
-    </style>
-  </defs>
-  <text id="Your_Logo" data-name="Your Logo" class="cls-1" transform="translate(-0.128 32.463) scale(3.153)">Your Logo</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="215" height="42" viewBox="0 0 215 42"><defs><style>.cls-1{font-size:14.957px;opacity:.48;font-family:&quot;Myriad Pro&quot;;font-weight:700}</style></defs><text id="Your_Logo" class="cls-1" data-name="Your Logo" transform="translate(-0.128 32.463) scale(3.153)">Your Logo</text></svg>
